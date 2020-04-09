@@ -1,4 +1,6 @@
-﻿using Abc.Aids;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Abc.Aids;
 using Abc.Data.Quantity;
 using Abc.Domain.Quantity;
 using Abc.Facade.Quantity;
@@ -18,16 +20,22 @@ namespace Abc.Tests.Pages.Quantity
         }
 
         private class TestRepository : BaseTestRepositoryForUniqueEntity<Measure, MeasureData>, IMeasuresRepository { }
-        private class TermRepository : BaseTestRepositoryForPeriodEntity<Measure, MeasureData>, 
-            IMeasuresRepository {
-            protected override bool isThis(Measure entity, string id)
+        private class TermRepository : BaseTestRepositoryForPeriodEntity<MeasureTerm, MeasureTermData>, 
+            IMeasureTermRepository {
+            
+            protected override bool isThis(MeasureTerm entity, string id)
             {
-                return true;
+                throw new System.NotImplementedException();
             }
 
-            protected override string getId(Measure entity)
+            protected override string getId(MeasureTerm entity)
             {
-                return string.Empty;
+                throw new System.NotImplementedException();
+            }
+
+            public Task<List<MeasureTerm>> Get()
+            {
+                throw new System.NotImplementedException();
             }
         }
 

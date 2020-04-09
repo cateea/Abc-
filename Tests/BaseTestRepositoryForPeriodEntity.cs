@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abc.Data.Common;
 using Abc.Domain.Common;
@@ -13,15 +11,6 @@ namespace Abc.Tests
     {
 
         internal readonly List<TObj> list;
-        public BaseTestRepositoryForPeriodEntity()
-        {
-            list = new List<TObj>();
-        }
-        public async Task<List<TObj>> Get()
-        {
-            await Task.CompletedTask;
-            return list;
-        }
 
         public async Task<TObj> Get(string id)
         {
