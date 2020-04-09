@@ -7,7 +7,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.Measures {
 
     public class CreateModel : MeasuresPage {
 
-        public CreateModel(IMeasuresRepository r) : base(r) { }
+        public CreateModel(IMeasuresRepository r, IMeasureTermRepository t) : base(r, t) { }
 
         public IActionResult OnGet(string fixedFilter, string fixedValue)
         {

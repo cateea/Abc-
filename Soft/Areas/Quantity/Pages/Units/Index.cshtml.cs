@@ -7,15 +7,16 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units
     public class IndexModel : UnitsPage
     {
         
-        public IndexModel(IUnitsRepository r, IMeasuresRepository m) : base(r, m)
-    {
-    }
-
-        public async Task OnGetAsync(string sortOrder,
+        public IndexModel(IUnitsRepository r, IMeasuresRepository m,
+            IUnitFactorsRepository t, IUnitFactorsRepository f) : base(r, m, t, f) { }
+        public async Task OnGetAsync(string id, string sortOrder,
             string currentFilter, string searchString, int? pageIndex,
-            string fixedFilter, string fixedValue) {
+            string fixedFilter, string fixedValue)
+        {
 
-            await getList(sortOrder, currentFilter, searchString, pageIndex, fixedValue, fixedFilter);
+            SelectedId = id;
+            await getList(sortOrder, currentFilter, searchString, pageIndex,
+                fixedValue, fixedFilter);
 
         }
     }

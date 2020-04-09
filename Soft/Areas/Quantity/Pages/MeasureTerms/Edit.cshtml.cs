@@ -7,7 +7,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.MeasureTerms {
 
     public class EditModel : MeasureTermsPage {
 
-        public EditModel(IMeasureTermRepository r) : base(r) { }
+        public EditModel(IMeasureTermRepository r, IMeasuresRepository m) : base(r, m) { }
 
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
