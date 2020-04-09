@@ -7,21 +7,21 @@ namespace Abc.Tests.Domain.Common {
 
     [TestClass] public class EntityTests : AbstractClassTests<Entity<MeasureData>, object> {
 
-        private class testClass : Entity<MeasureData> {
+        private class TestClass : Entity<MeasureData> {
 
-            public testClass(MeasureData d = null) : base(d) { }
+            public TestClass(MeasureData d = null) : base(d) { }
 
         }
 
         [TestInitialize] public override void TestInitialize() {
             base.TestInitialize();
-            obj = new testClass();
+            obj = new TestClass();
         }
 
         [TestMethod] public void DataTest() {
             var d = GetRandom.Object<MeasureData>();
             Assert.AreNotSame(d, obj.Data);
-            obj = new testClass(d);
+            obj = new TestClass(d);
             Assert.AreSame(d, obj.Data);
         }
 

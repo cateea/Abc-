@@ -15,7 +15,7 @@ namespace Abc.Tests.Pages.Quantity
     {
         private class TestClass : UnitsPage
         {
-            internal TestClass(IUnitsRepository r, IMeasuresRepository m) : base(r, m) { }
+            internal TestClass(IUnitsRepository r, IMeasuresRepository m) : base(r, m, null, null) { }
         }
 
         private class UnitsRepository : BaseTestRepositoryForUniqueEntity<Unit, UnitData>, IUnitsRepository { }
