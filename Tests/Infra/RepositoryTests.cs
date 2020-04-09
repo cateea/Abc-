@@ -68,7 +68,7 @@ namespace Abc.Tests.Infra
             AddTest();
             var id = GetId(data);
             var expected = obj.Get(id).GetAwaiter().GetResult();
-            testArePropertyValuesEqual(data, expected.Data);
+            TestArePropertyValuesEqual(data, expected.Data);
             obj.Delete(id).GetAwaiter();
             expected = obj.Get(id).GetAwaiter().GetResult();
             Assert.IsNull(expected.Data);
@@ -84,7 +84,7 @@ namespace Abc.Tests.Infra
             Assert.IsNull(expected.Data);
             obj.Add(GetObject(data)).GetAwaiter();
             expected = obj.Get(id).GetAwaiter().GetResult();
-            testArePropertyValuesEqual(data, expected.Data);
+            TestArePropertyValuesEqual(data, expected.Data);
         }
 
         protected abstract TObject GetObject(TData d);
@@ -98,7 +98,7 @@ namespace Abc.Tests.Infra
             SetId(newData, id);
             obj.Update(GetObject(newData)).GetAwaiter();
             var expected = obj.Get(id).GetAwaiter().GetResult();
-            testArePropertyValuesEqual(newData, expected.Data);
+            TestArePropertyValuesEqual(newData, expected.Data);
         }
 
         protected abstract void SetId(TData d, string id);

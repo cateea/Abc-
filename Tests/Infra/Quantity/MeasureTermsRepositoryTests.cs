@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Infra.Quantity
 {
     [TestClass]
-    public class MeasureTermsRepositoryTests : RepositoryTests<IMeasureTermRepository, MeasureTerm, MeasureTermData>
+    public sealed class MeasureTermsRepositoryTests : RepositoryTests<IMeasureTermRepository, MeasureTerm, MeasureTermData>
     {
         [TestInitialize]
         public override void TestInitialize()

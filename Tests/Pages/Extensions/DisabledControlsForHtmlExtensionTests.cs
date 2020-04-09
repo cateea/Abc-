@@ -22,7 +22,10 @@ namespace Abc.Tests.Pages.Extensions
         [TestMethod]
         public void HtmlStringsTest()
         {
-            var expected = new List<string> { "<div", "<fieldset disabled>", "LabelFor", "EditorFor", "ValidationMessageFor", "</fieldset>", "</div>" };
+            var expected = new List<string>
+            {
+                "<div", "<fieldset disabled>", "LabelFor", "EditorFor", "ValidationMessageFor", "</fieldset>", "</div>"
+            };
             var actual = DisabledControlsForHtmlExtension.htmlStrings(new htmlHelperMock<MeasureView>(), x => x.ValidFrom);
             TestHtml.Strings(actual, expected);
         }

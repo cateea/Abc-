@@ -66,14 +66,14 @@ namespace Abc.Tests.Pages.Quantity
         {
             var view = GetRandom.Object<UnitView>();
             var o = obj.toObject(view);
-            testArePropertyValuesEqual(view, o.Data);
+            TestArePropertyValuesEqual(view, o.Data);
         }
 
         [TestMethod]
         public void ToViewTest() {
             var d = GetRandom.Object<UnitData>();
             var view = obj.toView(new Unit(d));
-            testArePropertyValuesEqual(view, d);
+            TestArePropertyValuesEqual(view, d);
         }
 
         [TestMethod]

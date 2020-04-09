@@ -51,7 +51,7 @@ namespace Abc.Tests.Pages.Quantity
         {
             var view = GetRandom.Object<MeasureView>();
             var o = obj.toObject(view);
-            testArePropertyValuesEqual(view, o.Data);
+            TestArePropertyValuesEqual(view, o.Data);
         }
 
         [TestMethod]
@@ -59,7 +59,7 @@ namespace Abc.Tests.Pages.Quantity
         {
             var data = GetRandom.Object<MeasureData>();
             var view = obj.toView(new Measure(data));
-            testArePropertyValuesEqual(view, data);
+            TestArePropertyValuesEqual(view, data);
         }
 
     }

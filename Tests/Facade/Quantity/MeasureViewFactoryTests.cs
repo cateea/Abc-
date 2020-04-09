@@ -18,7 +18,7 @@ namespace Abc.Tests.Facade.Quantity {
             var view = GetRandom.Object<MeasureView>();
             var data = MeasureViewFactory.Create(view).Data;
 
-            testArePropertyValuesEqual(view, data);
+            TestArePropertyValuesEqual(view, data);
 
         }
 
@@ -26,7 +26,7 @@ namespace Abc.Tests.Facade.Quantity {
             var data = GetRandom.Object<MeasureData>();
             var view = MeasureViewFactory.Create(new Measure(data));
 
-            testArePropertyValuesEqual(view, data);
+            TestArePropertyValuesEqual(view, data);
 
         }
 

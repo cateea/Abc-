@@ -24,7 +24,7 @@ namespace Abc.Tests.Facade.Quantity
             var view = GetRandom.Object<MeasureTermView>();
             var data = MeasureTermViewFactory.Create(view).Data;
 
-            testArePropertyValuesEqual(view, data);
+            TestArePropertyValuesEqual(view, data);
 
         }
 
@@ -34,7 +34,7 @@ namespace Abc.Tests.Facade.Quantity
             var data = GetRandom.Object<MeasureTermData>();
             var view = MeasureTermViewFactory.Create(new MeasureTerm(data));
 
-            testArePropertyValuesEqual(view, data);
+            TestArePropertyValuesEqual(view, data);
 
         }
 

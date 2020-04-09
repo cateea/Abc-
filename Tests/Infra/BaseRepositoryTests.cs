@@ -68,7 +68,7 @@ namespace Abc.Tests.Infra
         {
             AddTest();
             var expected = obj.Get(data.Id).GetAwaiter().GetResult();
-            testArePropertyValuesEqual(data, expected.Data);
+            TestArePropertyValuesEqual(data, expected.Data);
             obj.Delete(data.Id).GetAwaiter();
             expected = obj.Get(data.Id).GetAwaiter().GetResult();
             Assert.IsNull(expected.Data);
@@ -81,7 +81,7 @@ namespace Abc.Tests.Infra
             Assert.IsNull(expected.Data);
             obj.Add(new Measure(data)).GetAwaiter();
             expected = obj.Get(data.Id).GetAwaiter().GetResult();
-            testArePropertyValuesEqual(data, expected.Data);
+            TestArePropertyValuesEqual(data, expected.Data);
         }
 
         [TestMethod]
@@ -92,7 +92,7 @@ namespace Abc.Tests.Infra
             newData.Id = data.Id;
             obj.Update(new Measure(newData)).GetAwaiter();
             var expected = obj.Get(data.Id).GetAwaiter().GetResult();
-            testArePropertyValuesEqual(newData, expected.Data);
+            TestArePropertyValuesEqual(newData, expected.Data);
         }
 
     }
