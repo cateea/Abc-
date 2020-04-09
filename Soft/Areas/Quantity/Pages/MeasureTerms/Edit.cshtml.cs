@@ -12,9 +12,6 @@ namespace Abc.Soft.Areas.Quantity.Pages.MeasureTerms {
 
         public async Task<IActionResult> OnGetAsync(string id, string fixedFilter, string fixedValue)
         {
-
-            FixedFilter = fixedFilter;
-            FixedValue = fixedValue;
             await getObject(id, fixedFilter, fixedValue);
             return Page();
         }
@@ -23,7 +20,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.MeasureTerms {
         {
             await updateObject(fixedFilter, fixedValue);
 
-            return Redirect(PageUrl);
+            return Redirect(IndexUrl);
         }
 
     }

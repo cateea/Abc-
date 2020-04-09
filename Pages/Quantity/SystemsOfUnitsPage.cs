@@ -9,7 +9,7 @@ namespace Abc.Pages.Quantity
 
         protected internal SystemsOfUnitsPage(ISystemsOfUnitsRepository r = null) : base(r)
         {
-            PageTitle = "System Of Units";
+            PageTitle = "Systems of Units";
         }
 
         public override string ItemId => Item.Id;
