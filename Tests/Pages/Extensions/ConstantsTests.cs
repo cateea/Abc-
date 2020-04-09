@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Pages.Extensions
 {
     [TestClass]
-    public class CostantsTests: BaseTests
+    public class ConstantsTests: BaseTests
     {
         [TestInitialize] public virtual void TestIntialize()=> type = typeof(Constants);
         
@@ -47,5 +47,7 @@ namespace Abc.Tests.Pages.Extensions
         [TestMethod] public void RatesPageTitleTest() => Assert.AreEqual("Day Rates", Constants.RatesPageTitle);
         [TestMethod] public void PaymentMethodsPageTitleTest() => Assert.AreEqual("Payment Methods", Constants.PaymentMethodsPageTitle);
         [TestMethod] public void CalculatorPageTitleTest() => Assert.AreEqual("Calculator", Constants.CalculatorPageTitle);
+        [TestMethod] public void SelectLinkTitleTest() => Assert.AreEqual("Select", Constants.SelectLinkTitle);
+
     }
 }

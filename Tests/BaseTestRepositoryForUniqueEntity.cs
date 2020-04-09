@@ -5,12 +5,12 @@ using Abc.Domain.Common;
 
 namespace Abc.Tests
 {
-    internal class BaseTestRepository<TObj, TData> 
+    internal class BaseTestRepositoryForUniqueEntity<TObj, TData> 
         where TObj:Entity<TData>
         where TData: UniqueEntityData, new(){
 
         internal readonly List<TObj> list;
-        public BaseTestRepository() {
+        public BaseTestRepositoryForUniqueEntity() {
             list = new List<TObj>();
     }
         public async Task<List<TObj>> Get() {

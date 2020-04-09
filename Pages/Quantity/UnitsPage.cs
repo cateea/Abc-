@@ -3,20 +3,18 @@ using Abc.Domain.Quantity;
 using Abc.Facade.Quantity;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using Abc.Aids;
 using Abc.Facade.Common;
-using Core.Units;
 
 namespace Abc.Pages.Quantity {
 
     public abstract class UnitsPage : CommonPage<IUnitsRepository, Unit, UnitView, UnitData>
     {
 
-        protected internal readonly IUnitFactorsRepository terms;
+        protected internal readonly IUnitTermsRepository terms;
         protected internal readonly IUnitFactorsRepository factors;
         protected internal UnitsPage(IUnitsRepository r, IMeasuresRepository m,
-            IUnitFactorsRepository t, IUnitFactorsRepository f) : base(r) 
+            IUnitTermsRepository t, IUnitFactorsRepository f) : base(r) 
         {
             PageTitle = "Units";
             Measures = createSelectList<Measure, MeasureData>(m);

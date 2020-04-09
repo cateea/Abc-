@@ -8,7 +8,7 @@ namespace Abc.Soft.Areas.Quantity.Pages.Units
     {
         
         public IndexModel(IUnitsRepository r, IMeasuresRepository m,
-            IUnitFactorsRepository t, IUnitFactorsRepository f) : base(r, m, t, f) { }
+            IUnitTermsRepository t, IUnitFactorsRepository f) : base(r, m, t, f) { }
         public async Task OnGetAsync(string id, string sortOrder,
             string currentFilter, string searchString, int? pageIndex,
             string fixedFilter, string fixedValue)

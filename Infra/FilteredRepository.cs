@@ -30,7 +30,7 @@ namespace Abc.Infra {
             var expression = CreateFixedWhereExpression();
             return expression is null ? query : query.Where(expression);
         }
-        private Expression<Func<TData, bool>> CreateFixedWhereExpression()
+        internal Expression<Func<TData, bool>> CreateFixedWhereExpression()
         {
             if (FixedFilter is null) return null;
             if (FixedValue is null) return null;

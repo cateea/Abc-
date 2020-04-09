@@ -1,13 +1,15 @@
-﻿using Abc.Data.Quantity;
+﻿using System.Collections.Generic;
+using Abc.Data.Quantity;
 using Abc.Domain.Quantity;
 using Abc.Facade.Quantity;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Abc.Pages.Quantity
 {
     public class SystemsOfUnitsPage : CommonPage<ISystemsOfUnitsRepository, SystemOfUnits, SystemOfUnitsView, SystemOfUnitsData>
     {
 
-        protected internal SystemsOfUnitsPage(ISystemsOfUnitsRepository r = null) : base(r)
+        protected internal SystemsOfUnitsPage(ISystemsOfUnitsRepository r) : base(r)
         {
             PageTitle = "Systems of Units";
         }

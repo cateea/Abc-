@@ -18,8 +18,8 @@ namespace Abc.Tests.Pages.Quantity
             internal TestClass(IUnitsRepository r, IMeasuresRepository m) : base(r, m) { }
         }
 
-        private class UnitsRepository : BaseTestRepository<Unit, UnitData>, IUnitsRepository { }
-        private class MeasuresRepository : BaseTestRepository<Measure, MeasureData>, IMeasuresRepository { }
+        private class UnitsRepository : BaseTestRepositoryForUniqueEntity<Unit, UnitData>, IUnitsRepository { }
+        private class MeasuresRepository : BaseTestRepositoryForUniqueEntity<Measure, MeasureData>, IMeasuresRepository { }
 
         private UnitsRepository units = new UnitsRepository();
         private MeasuresRepository measures = new MeasuresRepository();
