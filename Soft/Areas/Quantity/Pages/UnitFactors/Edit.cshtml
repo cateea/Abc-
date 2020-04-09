@@ -7,8 +7,10 @@
 }
 
 <body>
-    @Html.EditControlsFor(m => m.Item.SystemOfUnitsId)
-    @Html.EditControlsFor(m => m.Item.UnitId)
+    <input type="hidden" asp-for="Item.SystemOfUnitsId" />
+    <input type="hidden" asp-for="Item.UnitId" />
+    @Html.DisabledControlsFor(m => m.Item.SystemOfUnitsId)
+    @Html.DisabledControlsFor(m => m.Item.UnitId)
     @Html.EditControlsFor(m => m.Item.Factor)
     @Html.EditControlsFor(m => m.Item.ValidFrom)
     @Html.EditControlsFor(m => m.Item.ValidTo)
